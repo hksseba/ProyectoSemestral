@@ -50,13 +50,8 @@ header button[type="submit"]:hover {
     width: 25%;
 }
 
-.blanco {
-    filter: hue-rotate(120deg) brightness(500%);
-}
-
-/*Arreglar saturacion de color del icono de carrito*/
-.blanco1 {
-    filter: hue-rotate(780deg) brightness(10000%);
+.negro {
+    filter: brightness(0%);
 }
 
 nav ul {
