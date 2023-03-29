@@ -54,6 +54,7 @@ header button[type="submit"]:hover {
   filter: brightness(0%);
 }
 
+.vertical-menu {
   width: 100%; /* Set a width if you like */
   height: 100%;
 }
