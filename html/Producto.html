@@ -7,21 +7,24 @@
     <title>Document</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../css/Estilos.css">
+	<link rel="stylesheet" type="text/css" href="../css/EstiloProducto.css">
 </head>
 <body>
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<header>
-				<div class="col-2">
+				<div class="col-1">
         			<div class="logo">
 						<a title="Logo" href="PaginaPrincipal.html"><img src="../img/logo.png" alt="Logo de la empresa"></a>
 					</div>
+				</div>
+                <div class="col-2">
 					<h1>Compras en línea</h1>
 				</div>
-				<div class="col-7">					
+				<div class="col-6">					
 					<form action="#" method="get">
 						<input type="text" placeholder="Buscar productos...">
-						<a title="button" href="Buscador.html"><button type="submit">Buscar</button></a>
+						<a title="Buscador" href="Buscador.html"><button type="submit">Buscar</button></a>
        				</form>
 				</div>
 				<div class="col-3">
@@ -33,12 +36,36 @@
 			</header>
 		</div>
 		<div class="row">
-
+            <div class="col">
+				<div class="container1">
+					<div class="Pro">
+						<img src="../img/Laptop.jfif" alt="Producto 1">
+					</div>				
+				</div>
+			</div>
+			<div class="col">
+				<div class="nombre">
+					<h1>Notebook Lenovo Ideapad 1 Intel Celeron 4GB RAM 256GB SSD Integrated Intel UHD Graphics 600 14"</h1>
+				</div>
+				<h3>$ 279.990</h3>
+				<h2>★★★★★</h2>
+				<div class="mi-button">
+					<a title="Producto"><button>Comprar</button></a>
 				</div>
 			</div>
 		</div>
-	</div>
-
+		<div class="row">
+            <div class="col">
+				<div class="mi-contenedor">
+						<h1>Especificaciones técnicas</h1>
+						<p>Cámara principal: Sobre 40MP</p>
+						<p>Cámara frontal: 13MP</p>
+						<p>Tamaño de la pantalla: 6.4 pulgadas</p>
+						<p>Memoria interna: 128GB</p>
+						<p>Núcleos del procesador: Octa Core</p>		
+				</div>
+			</div>
+		</div>         
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
