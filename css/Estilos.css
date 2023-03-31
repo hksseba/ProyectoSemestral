@@ -1,6 +1,6 @@
 /* Estilos para el header */
 header {
-  background-color: #8ea2f4;
+  background-color: #24262b;
   color: #fff;
   padding: 20px;
   display: flex;
@@ -60,7 +60,7 @@ header button :hover {
 
 .vertical-menu a {
   background-color: #eee; /* Grey background color */
-  color: black; /* Black text color */
+  color: #24262b; /* Black text color */
   display: block; /* Make the links appear below each other */
   padding: 12px; /* Add some padding */
   text-decoration: none; /* Remove underline from links */
@@ -71,7 +71,7 @@ header button :hover {
 }
 
 .vertical-menu a.active {
-  background-color: #04AA6D; /* Add a green color to the "active/current" link */
+  background-color: #24262b; /* Add a green color to the "active/current" link */
   color: white;
 }
 
