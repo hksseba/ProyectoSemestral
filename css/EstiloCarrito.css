@@ -69,17 +69,8 @@ select{
     width: 100%;
     background-color: rgb(247, 247, 247);
 }
-input{
-    border: 1px solid rgba(0, 0, 0, 0.137);
-    padding: 1vh;
-    outline: none;
-    width: 100%;
-    background-color: rgb(247, 247, 247);
-}
-input:focus::-webkit-input-placeholder
-{
-      color:transparent;
-}
+
+
 .btn{
     background-color: #000;
     border-color: #000;
@@ -116,7 +107,7 @@ a:hover{
     background-position-y: center;
 }
 
-img{
+.carrimg{
     width: 60px;
     height: 60px;
 }
