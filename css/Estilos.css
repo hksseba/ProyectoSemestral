@@ -11,12 +11,7 @@ header {
   height: 100px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-header form {
+.formul {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -43,17 +38,78 @@ header button :hover {
   background-color: #0062cc;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .logo img {
-  width: 100px;
+  width: 60px;
+  margin-bottom: 10px;
 }
 
-.bar img{
+header .col-3 {
+  display: flex;
+  align-items: center;
+}
+
+Copy code
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-left: 10px;
+}
+
+.formul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formul input[type="text"] {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  width: 70%;
+}
+
+.formul button[type="submit"] {
+  background-color: #f80901;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-left: 10px;
+}
+
+.col-3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bar {
   height: 8%;
-  width: 100px;
+  width: 75px;
+  margin-right: 50px;
 }
 
-.negro {
-  filter: brightness(0%);
+.bar1 {
+  height: 5%;
+  width: 60px;
+  margin-right: 50px;
 }
 
 .vertical-menu {
