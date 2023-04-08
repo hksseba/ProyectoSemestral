@@ -7,6 +7,7 @@
     <title>Document</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../css/Estilos.css">
+	<link rel="stylesheet" type="text/css" href="../css/EstiloHeader.css">
 	<link rel="stylesheet" type="text/css" href="../css/EstiloBuscador.css">
 	<link rel="stylesheet" href="../css/Footer.css">
 </head>
@@ -14,21 +15,25 @@
 	<div class="container-fluid">
 		<div class="row">
 			<header>
-				<div class="col-3">
-        			<div class="logo">
-						<a title="Logo" href="PaginaPrincipal.html"><img src="../img/logo.png" alt="Logo de la empresa"></a>
+				<div class="col-md-3">
+					<div class="colum">
+						<div class="logo">
+							<a title="Logo" href="PaginaPrincipal.html"><img src="../img/logo.png" alt="Logo de la empresa"></a>
+						</div>
+						<h3>NextGenStore</h3>
 					</div>
-					<h1>NextGenStore</h1>
 				</div>
-				<div class="col-6">					
+				<div class="col-md-6">					
 					<div class="formul">
 						<input type="text" placeholder="Buscar productos...">
 						<a title="Buscador" href="Buscador.html"><button type="submit">Buscar</button></a>
 					</div>
 				</div>
-				<div class="col-3">
-					<a title="InicioSesion" href="InicioSesion.html"><img class="bar" src="../img/usuario.png" alt="usuario"></a>
-					<a title="Carrito" href="Carrito.html"><img class="bar1" src="../img/carrito.png" alt="usuario"></a>
+				<div class="col-md-3">
+					<div class="colum">
+						<a title="InicioSesion" href="InicioSesion.html"><img class="bar" src="../img/usuario.png" alt="usuario"></a>
+						<a title="Carrito" href="Carrito.html"><img class="bar1" src="../img/carrito.png" alt="usuario"></a>
+					</div>
 				</div>
 			</header>
 		</div>
@@ -45,50 +50,59 @@
                 </div>
             </div>
 			<div class="col">
-				<div class="row">
-					<div class="col">
-						<div class="container1">
-							<div class="item">
-								<img src="../img/Memoria.jfif" alt="Producto 1">
-								<h5>MEMORIA MICRO SD SANDISK CONADAP Ultra 667X 128GB</h5>
-								<p>$ 12.990</p>
-								<a title="Producto" href="Producto.html"><button>Comprar</button></a>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="container1">
-							<div class="item">
-								<img src="../img/Celular.jpg" alt="Producto 1">
-								<h5>Smartphone Redmi 9C 64GB/3GB Gris Wom</h5>
-								<p>$ 169.990</p>
-								<a title="Producto" href="Producto.html"><button>Comprar</button></a>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="container1">
-							<div class="item">
-								<img src="../img/Laptop.jfif" alt="Producto 1">
-								<h5>Notebook Lenovo Ideapad 1 Intel Celeron 4GB RAM 256GB SSD Integrated Intel UHD Graphics 600 14"</h5>
-								<p>$ 279.990</p>
-								<a title="Producto" href="Producto.html"><button>Comprar</button></a>
-							</div>
-						</div>
+				<div class="producto">
+					<img class="producto-imagen" src="../img/Memoria.jfif" alt="Producto 1">
+					<div class="producto-contenido">
+						<h2 class="producto-nombre">MEMORIA MICRO SD SANDISK CONADAP Ultra 667X 128GB</h2>
+						<span class="producto-precio">$ 12.990</span>
+						<a title="Producto" href="Producto.html"><button class="producto-botón">Comprar</button></a>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col">
-						<div class="container1">
-							<div class="item">
-								<img src="../img/Reloj.png" alt="Producto 1">
-								<h5>Apple Watch SE con GPS - Caja de aluminio Medianoche de 40 mm - Correa deportiva Medianoche</h5>
-								<p>$289.990</p>
-								<a title="Producto" href="Producto.html"><button>Comprar</button></a>
-							</div>
-						</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2">
+
+			</div>
+			<div class="col">
+				<div class="producto">
+					<img class="producto-imagen" src="../img/Celular.jpg" alt="Producto 1">
+					<div class="producto-contenido">
+						<h2 class="producto-nombre">Smartphone Redmi 9C 64GB/3GB Gris Wom</h2>
+						<span class="producto-precio">$ 169.990</span>
+						<a title="Producto" href="Producto.html"><button class="producto-botón">Comprar</button></a>
 					</div>
-				</div>	
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2">
+
+			</div>
+			<div class="col">
+				<div class="producto">
+					<img class="producto-imagen" src="../img/Laptop.jfif" alt="Producto 1">
+					<div class="producto-contenido">
+						<h2 class="producto-nombre">Notebook Lenovo Ideapad 1 Intel Celeron 4GB RAM 256GB SSD Integrated Intel UHD Graphics 600 14"</h2>
+						<span class="producto-precio">$ 279.990</span>
+						<a title="Producto" href="Producto.html"><button class="producto-botón">Comprar</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2">
+
+			</div>
+			<div class="col">
+				<div class="producto">
+					<img class="producto-imagen" src="../img/Reloj.png" alt="Producto 1">
+					<div class="producto-contenido">
+						<h2 class="producto-nombre">Apple Watch SE con GPS - Caja de aluminio Medianoche de 40 mm - Correa deportiva Medianoche</h2>
+						<span class="producto-precio">$289.990</span>
+						<a title="Producto" href="Producto.html"><button class="producto-botón">Comprar</button></a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
