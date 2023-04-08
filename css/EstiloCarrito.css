@@ -4,8 +4,7 @@
 }
 .card{
     margin: auto;
-    max-width: 950px;
-    width: 90%;
+    max-width: 100%;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 1rem;
     border: transparent;
@@ -99,12 +98,6 @@ a{
 a:hover{
     color: black;
     text-decoration: none;
-}
- #code{
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253) , rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: center;
 }
 
 .carrimg{
