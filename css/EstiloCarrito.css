@@ -109,3 +109,6 @@ a:hover{
     padding-top: 7%;
     
 }
+.col-2{
+    max-width: 100%;
+}
