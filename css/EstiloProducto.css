@@ -3,7 +3,16 @@
 }
 
 .nombre h1 {
-    padding-top: 15%;
+    padding-top: 9%;
+}
+
+.precio{
+  font-size: 35px;
+}
+
+.descuento{
+  font-size: 25px;
+  color: rgb(222, 26, 12);
 }
 
 .mi-contenedor {
@@ -22,7 +31,7 @@
     line-height: 1.5;
   }
 
-  .mi-contenedor h1 {
+  .mi-contenedor h3 {
     text-align: center;
     font-family: Arial, sans-serif;
     color: #333;
