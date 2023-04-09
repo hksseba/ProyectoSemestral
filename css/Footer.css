@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 body{
-  line-height: 1.5;
-  font-family: 'Poppins', sans-serif;
+  margin:0;
+  display: grid;
+min-height: 100vh;
+grid-template-rows: auto 1fr auto;
 }
+
 *{
   margin:0;
   padding:0;
@@ -22,7 +25,8 @@ ul{
   background-color: #24262b;
     padding: 70px 0;
     text-align: left;
-    color: #bbbbbb;
+    color: #bbbbbb; 
+  width: 100%;
 }
 .footer-col{
    width: 25%;
