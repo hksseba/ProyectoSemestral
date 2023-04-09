@@ -76,7 +76,7 @@ textarea{
 	min-height: 150px;
 }
 
-.btn{
+.ebtn{
 	width: 100%;
 	padding: 0.5rem 1rem;
 	background-color: #191a19;
@@ -89,7 +89,7 @@ textarea{
 }
 
 .btn:hover{
-    background-color: #0d0e0d;
+    background-color: #c7c719;
 }
 
 .field:focus{

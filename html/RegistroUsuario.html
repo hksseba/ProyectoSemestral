@@ -12,30 +12,51 @@
     <title>Document</title>
 </head>
     <body>
-      <div class="row">
-        <header>
-          <div class="col-md-3">
-            <div class="colum">
-              <div class="logo">
-                <a title="Logo" href="PaginaPrincipal.html"><img src="../img/laptop.png" alt="Logo de la empresa"></a>
-              </div>
-              <h3>NextGenStore</h3>
-            </div>
-          </div>
-          <div class="col-md-6">					
-            <div class="formul">
-              <input type="text" placeholder="Buscar productos...">
-              <a title="Buscador" href="Buscador.html"><button type="submit">Buscar</button></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="colum">
-              <a title="InicioSesion" href="InicioSesion.html"><img class="bar" src="../img/perfil.png" alt="usuario"></a>
-              <a title="Carrito" href="Carrito.html"><img class="bar1" src="../img/online-shopping.png" alt="usuario"></a>
-            </div>
-          </div>
-        </header>
-      </div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <img src="../img/laptop.png" alt="logo" class="mr-2" height="30">
+        <a class="navbar-brand" href="#">NextGenStore</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mr-auto" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../html/PaginaPrincipal.html">Inicio
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../html/Buscador.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Design</a>
+                        <a class="dropdown-item" href="#">Development</a>
+                        <a class="dropdown-item" href="#">Marketing</a>
+                    </div>
+                </li>                 
+            </ul>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2 " justify-content="center" type="search" placeholder="Buscar" aria-label="Buscar">
+                <a title="Buscador" href="Buscador.html"><button class="btn btn-outline-warning my-2 my-sm-0"type="submit">Buscar</button></a>
+
+            </form>
+            
+                <a class="nav-item" href="../html/Carrito.html"><img src="../img/online-shopping.png" class="ml-2" height="30" ></a>
+            
+            
+                <a class="nav-item" href="../html/InicioSesion.html"><img src="../img/perfil.png" class="ml-2" height="30" ></a>   
+               
+        </div>
+    </nav>
         <div class="row">
             <div class="col-lg-3 col-md-1 col-xs-1"></div>
             <div class="col-lg-6 col-md-10 col-xs-10 "  >
@@ -49,7 +70,7 @@
                         <input type="text" class="field" placeholder="Celular/Telefono">
                         <input type="text" class="field" placeholder="Correo">
                         <a href="../html/InicioSesion.html">
-                          <button class="btn">Registrarse</button>
+                          <button class="ebtn">Registrarse</button>
                        </a>
                     </div>
                 </div>
