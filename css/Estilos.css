@@ -1,3 +1,11 @@
+.fondo{
+  background-image: url(../img/fondo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color:#000000
+}
 /* Estilos para el header */
 header {
   background-color: #24262b;
@@ -338,11 +346,11 @@ body {
 
 #banner {
   width: 100%;
-  background-image: url('https://via.placeholder.com/1200x400');
+  background-image: url('../img/banner.jpg');
   background-size: cover;
   background-position: center;
   text-align: center;
-  color: #fff;
+  color: #000000;
   padding: 3rem 0;
 }
 
