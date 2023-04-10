@@ -1,5 +1,5 @@
 .fondo{
-  background-image: url(../img/fondo.jpg);
+  background-image: url(../img/banner2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -346,11 +346,11 @@ body {
 
 #banner {
   width: 100%;
-  background-image: url('../img/banner.jpg');
+  background-image: url('../img/banner2.jpg');
   background-size: cover;
   background-position: center;
   text-align: center;
-  color: #000000;
+  color: #ffffff;
   padding: 3rem 0;
 }
 
