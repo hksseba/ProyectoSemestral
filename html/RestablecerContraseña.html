@@ -60,22 +60,30 @@
                       <h3><i class="fa fa-lock fa-4x"></i></h3>
                       <h2 class="text-center">Olvidaste tu contraseña?</h2>
                       <p>Puedes restablecer tu contraseña aqui.</p>
-                      <p>¿Cual fue el nombre de tu primera mascota?</p>
+                      <p>Escriba su nueva contraseña</p>
                       <div class="panel-body">
-        
                         <form id="register-form" role="form" autocomplete="off" class="form" method="post">
+                            <div class="form-group">
+                                <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                <input id="repuesta" name="" placeholder="Contraseña" class="form-control"  type="email">
+                                </div>
+                            </div>
+                        </form>
+                        <form id="register-form" role="form" autocomplete="off" class="form" method="post">
+                            <p>Repita la nueva contraseña</p>
         
                           <div class="form-group">
                             <div class="input-group">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                              <input id="repuesta" name="" placeholder="Responde la pregunta" class="form-control"  type="email">
+                              <input id="repuesta" name="" placeholder="Contraseña" class="form-control"  type="email">
                             </div>
                           </div>
                           
                           <input type="hidden" class="hide" name="token" id="token" value=""> 
                         </form>
-						<div class="form-group">
-                            <a href="RestablecerContraseña.html"><input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Recuperar contraseña" type="submit"></a>
+                        <div class="form-group">
+                            <a href="PaginaPrincipal.html"><input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Recuperar contraseña" type="submit"></a>
                         </div>
         
                       </div>
