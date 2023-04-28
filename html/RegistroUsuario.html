@@ -14,7 +14,7 @@
     <body>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
         <img src="../img/laptop.png" alt="logo" class="mr-2" height="30">
-        <a class="navbar-brand" href="#">NextGenStore</a>
+        <a class="navbar-brand">NextGenStore</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
             aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -57,12 +57,16 @@
                     <div class="left"></div>
                     <div class="right">
                         <h2>Registro</h2>
-                        <input type="text" class="field" placeholder="Nombre completo">
-                        <input type="password" class="field" placeholder="Contraseña">
-                        <input type="text" class="field" placeholder="Celular/Telefono">
-                        <input type="text" class="field" placeholder="Correo">
-                        <a href="../html/Usuario.html">
-                          <button class="ebtn">Registrarse</button>
+                        <form action="" method="POST" id="formregistro"></form>
+                        <div class="form">
+                        <input type="text" name="" id="nombre" class="field" placeholder="Nombre completo">
+                        <input type="password" name="" id="contrasena" class="field" placeholder="Contraseña">
+                        <input type="text" name="" id="telefono" class="field" placeholder="Celular/Telefono">
+                        <input type="text" name="" id="email" class="field" placeholder="Correo">
+                      </div>
+                        
+                          <button type="submit" class="ebtn">Registrarse</button>
+                        
                         <a href="../html/olvidoClave.html">¿Olvidaste tu contraseña?</a>  
                        <a></a>
                     </div>
