@@ -32,9 +32,16 @@ formulario.addEventListener("submit", function (event) {
     msjMostrar = msjMostrar + "<br>Ingresa una contraseña";
     msj.innerHTML= msjMostrar;
 }
+if (clave.value[0] !== clave.value[0].toUpperCase()) {
+  msjMostrar = msjMostrar + "<br> Ingresa una mayuscula"
+  msj.innerHTML= msjMostrar;
+return false;
+
+}
+
   // Verificar si la contraseña tiene al menos 8 caracteres
   if (clave.value.length < 8) {
-    msjMostrar = msjMostrar + "<br> Minimo 8 caracteres"
+    msjMostrar = msjMostrar + "<br> La contraseña debe tener minimo 8 caracteres"
     msj.innerHTML= msjMostrar;
   return false;
 }
@@ -54,3 +61,11 @@ if (!/\d/.test(clave.value)) {
   return false;
 }
 });
+function esMayuscula(letra){
+  if(letra == letra.toUpperCase()){
+      return true;
+  }
+  else{
+      enviar = true;
+  }
+}
