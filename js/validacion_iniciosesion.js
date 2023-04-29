@@ -21,11 +21,36 @@ formulario.addEventListener("submit", function (event) {
     // El correo electrónico es válido
     msj.innerHTML = "<br> Enviado";
     
-    formulario.reset(); // Limpiar el formulario si se desea
+    
   } else {
     // El correo electrónico es inválido
     msjMostrar = msjMostrar + "<br> Ingrese un correo valido"
     msj.innerHTML= msjMostrar;
     
   }
+  if(clave.value == ""  ){
+    msjMostrar = msjMostrar + "<br>Ingresa una contraseña";
+    msj.innerHTML= msjMostrar;
+}
+  // Verificar si la contraseña tiene al menos 8 caracteres
+  if (clave.value.length < 8) {
+    msjMostrar = msjMostrar + "<br> Minimo 8 caracteres"
+    msj.innerHTML= msjMostrar;
+  return false;
+}
+
+// Verificar si la contraseña contiene un carácter especial
+var caracteresEspeciales = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+if (!caracteresEspeciales.test(clave.value)) {
+    msjMostrar = msjMostrar + "<br> Agrega un caracter especial"
+    msj.innerHTML= msjMostrar;
+  return false;
+}
+
+// Verificar si la contraseña contiene números y no están seguidos
+if (!/\d/.test(clave.value)) {
+    msjMostrar = msjMostrar + "<br> Ingresa algun numero en la clave"
+    msj.innerHTML= msjMostrar;
+  return false;
+}
 });

@@ -37,37 +37,62 @@ formulario.addEventListener('submit',e =>{
       // El correo electrónico es inválido
       msjMostrar = msjMostrar + "<br> Ingrese un correo valido"
       msj.innerHTML= msjMostrar;
-      console.log("falso");
     }
 
-    if (clave.value.length < 8){
-        msjMostrar = msjMostrar + "<br>Ingrese una contraseña valida";
-        msj.innerHTML=msjMostrar;
-        enviar = true;
-    }
-    var letra = clave.value.charAt(0);
-    if(!esMayuscula(letra)){
-        msjMostrar = msjMostrar + "<br>La primera letra debe ser mayuscula";
-        msj.innerHTML=msjMostrar;
-        enviar = true;
+    if(clave.value == ""  ){
+        msjMostrar = msjMostrar + "<br>Ingresa una contraseña";
+        msj.innerHTML= msjMostrar;
     }
 
-    var caracteresEspeciales = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
-    if (!caracteresEspeciales.test(clave)) {
-        msjMostrar = msjMostrar + "<br>Debe contener un caracter especial";
-        msj.innerHTML=msjMostrar;
-        enviar = true;
+        // Verificar si la primera letra es mayúscula
+        if (clave.value[0] !== clave.value[0].toUpperCase()) {
+            msjMostrar = msjMostrar + "<br> Ingresa una mayuscula"
+            msj.innerHTML= msjMostrar;
+          return false;
         
-    }
-    })
+        }
+      
+        // Verificar si la contraseña tiene al menos 8 caracteres
+        if (clave.value.length < 8) {
+            msjMostrar = msjMostrar + "<br> Minimo 8 caracteres"
+            msj.innerHTML= msjMostrar;
+          return false;
+        }
+      
+        // Verificar si la contraseña contiene un carácter especial
+        var caracteresEspeciales = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+        if (!caracteresEspeciales.test(clave.value)) {
+            msjMostrar = msjMostrar + "<br> Agrega un caracter especial"
+            msj.innerHTML= msjMostrar;
+          return false;
+        }
+      
+        // Verificar si la contraseña contiene números y no están seguidos
+        if (!/\d/.test(clave.value)) {
+            msjMostrar = msjMostrar + "<br> Ingresa algun numero en la clave"
+            msj.innerHTML= msjMostrar;
+          return false;
+        }
+        
+        if (!/^\d+$/.test(fono.value)) {
+            msjMostrar = msjMostrar + "<br> Ingresa algun numero de telefono"
+            msj.innerHTML= msjMostrar;
+            return false;
+          }
+        
+          if (fono.value.charAt(0) !== "9") {
+            return false;
+          } 
+        
+          // Verificar si el número de teléfono tiene un máximo de 9 dígitos
+        if (fono.value.length !== 9) {
+            msjMostrar = msjMostrar + "<br> Ingresa un numero de telefono valido"
+            msj.innerHTML= msjMostrar;
+            return false;
+          }
 
-      // Verificar si la contraseña contiene números y no están seguidos
-  var numerosSeguidos = /\d{3}/;
-  if (!/\d/.test(clave) || numerosSeguidos.test(clave)) {
-    msjMostrar = msjMostrar + "<br>No ingreses mas de 3 numeros seguidos";
-    msj.innerHTML=msjMostrar;
-    enviar = true;
-  }
+             
+    })
 
     function esMayuscula(letra){
         if(letra == letra.toUpperCase()){
