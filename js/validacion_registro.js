@@ -13,7 +13,7 @@ formulario.addEventListener('submit',e =>{
     e.preventDefault();
     let msjMostrar = "";
     let enviar = false;
-    if(nombre.value.length < 4 || nombre.value.length > 25){
+    if(nombre.value.length < 4 || nombre.value.length > 20){
         msjMostrar = msjMostrar + "<br>El nombre debe tener entre 4 y 20 caracteres.";
         enviar = true;       
     }
@@ -53,8 +53,8 @@ formulario.addEventListener('submit',e =>{
         }
       
         // Verificar si la contraseña tiene al menos 8 caracteres
-        if (clave.value.length < 8) {
-            msjMostrar = msjMostrar + "<br> Minimo 8 caracteres"
+        if (clave.value.length < 8 || clave.value.length > 25 ) {
+            msjMostrar = msjMostrar + "<br> La contraseña debe tener un minimo 8 caracteres y un maximo de 25 caracteres "
             msj.innerHTML= msjMostrar;
           return false;
         }
@@ -90,9 +90,12 @@ formulario.addEventListener('submit',e =>{
             msj.innerHTML= msjMostrar;
             return false;
           }
-
+          else{ msjMostrar = msjMostrar + "<br> Enviado"
+          msj.innerHTML= msjMostrar;
+          window.location.href = '../html/InicioSesion.html';
+          }
              
-    })
+    });
 
     function esMayuscula(letra){
         if(letra == letra.toUpperCase()){

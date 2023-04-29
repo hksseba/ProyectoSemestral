@@ -16,12 +16,10 @@ formulario.addEventListener("submit", function (event) {
 
   // Expresión regular para verificar el correo electrónico
   const regex = /@(gmail|hotmail|yahoo)\./;
+  
 
   if (regex.test(email)) {
     // El correo electrónico es válido
-    msj.innerHTML = "<br> Enviado";
-    
-    
   } else {
     // El correo electrónico es inválido
     msjMostrar = msjMostrar + "<br> Ingrese un correo valido"
@@ -40,8 +38,8 @@ return false;
 }
 
   // Verificar si la contraseña tiene al menos 8 caracteres
-  if (clave.value.length < 8) {
-    msjMostrar = msjMostrar + "<br> La contraseña debe tener minimo 8 caracteres"
+  if (clave.value.length < 8 || clave.value.length > 25) {
+    msjMostrar = msjMostrar + "<br> La contraseña debe tener un minimo 8 caracteres y un maximo de 25 caracteres "
     msj.innerHTML= msjMostrar;
   return false;
 }
@@ -59,6 +57,10 @@ if (!/\d/.test(clave.value)) {
     msjMostrar = msjMostrar + "<br> Ingresa algun numero en la clave"
     msj.innerHTML= msjMostrar;
   return false;
+}
+else{ msjMostrar = msjMostrar + "<br> Enviado"
+msj.innerHTML= msjMostrar;
+window.location.href = '../html/PaginaPrincipal.html';
 }
 });
 function esMayuscula(letra){
