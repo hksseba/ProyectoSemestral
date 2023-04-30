@@ -64,21 +64,13 @@
 						<p>Puedes restablecer tu contraseña aqui.</p>
 						<p>Ingrese su correo</p>
 						<div class="panel-body">
-		  
-						  <form id="register-form" role="form" autocomplete="off" class="form" method="post">
-		  
-							<div class="form-group">
-							  <div class="input-group">
-								<span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-								<input id="correo" name="" placeholder="nombre@correo.com" class="form-control"  type="email">
-							  </div>
-							</div>
-							
-							<input type="hidden" class="hide" name="token" id="token" value=""> 
-						  </form>
-						  <div class="form-group">
-							  <a href="RestablecerContraseña.html"><input name="recover-submit" class="ebtn" value="Recuperar contraseña" type="submit"></a>
-						  </div>
+							<form action="" method="POST" id="formrContraseña">
+								<div class="form">
+									<input type="text" name="" id="email" class="field" placeholder="Correo">
+									<button type="submit" class="ebtn">Registrarse</button>
+                        			<p class="warnings" id="warnings"></p>                   
+								</div>
+							</form> 
 						</div>
 					  </div>
 				</div>
@@ -132,5 +124,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+	<script src="/js/Validacion_pregunta.js"></script>
 </body>
 </html>
