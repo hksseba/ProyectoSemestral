@@ -1,8 +1,8 @@
-var email = document.getElementById("email");
-var correo = "ga.maneiro@duocuc.cl";
-var clave1 = document.getElementById("rcontrasena");
+var correo = document.getElementById("email");
+var opcion = document.getElementById("lang");
+var respuesta = document.getElementById("respuesta");
 
-const formulario = document.getElementById("formrContraseña");
+const formulario = document.getElementById("formrPregunta");
 var msj = document.getElementById("warnings");
 
 
@@ -12,6 +12,7 @@ formulario.addEventListener('submit',e =>{
     e.preventDefault();
     let msjMostrar = "";
     let enviar = false;
+
     if(enviar){
         msj.innerHTML = msjMostrar;
     }
@@ -20,21 +21,25 @@ formulario.addEventListener('submit',e =>{
 
     }
 
-    if(email.value == ""  ){
-        msjMostrar = msjMostrar + "<br>Ingresa un correo";
-        msj.innerHTML= msjMostrar;
+    const email = correo.value.trim(); // Obtener el valor del campo de correo electrónico y eliminar espacios en blanco
+
+    if (email != "ga.maneiro@duocuc.cl") {
+        msjMostrar = msjMostrar + "<br> El correo no existe en el sistema"
+        msj.innerHTML= msjMostrar;   
+        return false;        
     }
 
-    if (email.value.toUpperCase!=correo1.toUpperCase) {
-        msjMostrar = msjMostrar + "<br> Correo no esta en el sistema"
-        msj.innerHTML= msjMostrar;
-        return false;
+    if (opcion.value != 2 || respuesta.value != "Miguel") {
+        msjMostrar = msjMostrar + "<br> Respuesta incorrecta"
+        msj.innerHTML= msjMostrar;   
+        return false;        
     }
+
     else{ msjMostrar = msjMostrar + "<br> Enviado"
-    msj.innerHTML= msjMostrar;
-    window.location.href = '../html/InicioSesion.html';
+        msj.innerHTML= msjMostrar;
+        window.location.href = '../html/RestablecerContraseña.html';
     }
-
+             
     });
 
     function esMayuscula(letra){

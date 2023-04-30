@@ -53,29 +53,36 @@
 	</nav>
 	<div class="row">
 		<div class="col-lg-2 col-md-1 col-xs-1"></div>
-		<div class="col-lg-8 col-md-10 col-xs-10 "  >
-		  <div class="inicontainer">
-			<div class="contact-box">
-				<div class="left"></div>
-				<div class="right">
-					<div class="text-center">
-						<h3><i class="fa fa-lock fa-4x"></i></h3>
-						<h2 class="text-center">¿Olvidaste tu contraseña?</h2>
-						<p>Puedes restablecer tu contraseña aqui.</p>
-						<p>Ingrese su correo</p>
-						<div class="panel-body">
-							<form action="" method="POST" id="formrContraseña">
-								<div class="form">
-									<input type="text" name="" id="email" class="field" placeholder="Correo">
-									<button type="submit" class="ebtn">Registrarse</button>
-                        			<p class="warnings" id="warnings"></p>                   
-								</div>
-							</form> 
+			<div class="col-lg-8 col-md-10 col-xs-10">
+				<div class="inicontainer">
+					<div class="contact-box">
+						<div class="left"></div>
+						<div class="right">
+							<div class="text-center">
+								<h3><i class="fa fa-lock fa-4x"></i></h3>
+								<h2 class="text-center">¿Olvidaste tu contraseña?</h2>
+								<p>Puedes restablecer tu contraseña aqui.</p>
+								<p>Ingrese su correo</p>
+								<form action="" method="POST" id="formrPregunta">
+									<div class="form">
+										<input type="text" name="" id="email" class="field" placeholder="Correo">
+										<label for="lang">Seleccione la pregunta</label>
+										<select name="languages" id="lang" class="field">
+											<option value="1">¿Cómo se llamaba tu primera mascota?</option>
+											<option value="2">¿Nombre de tu primer amigo/a?</option>
+											<option value="3">¿Cual fue tu primer colegio?</option>
+										</select>
+										<p>Ingrese la contraseña</p>
+										<input type="text" name="" id="respuesta" class="field" placeholder="Respuesta">
+										<button type="submit" class="ebtn">Cambiar Contraseña</button>
+										<p class="warnings" id="warnings"></p>
+									</div>
+								</form>  
+							</div>
 						</div>
-					  </div>
+					</div>
 				</div>
 			</div>
-		  </div>
 		</div>
 		<div class="col-lg-2 col-md-1 col-xs-1"></div>
 	</div>
@@ -124,6 +131,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-	<script src="/js/Validacion_pregunta.js"></script>
+	<script src="../js/Validacion_pregunta.js"></script>
 </body>
 </html>
