@@ -1,6 +1,9 @@
 var correo = document.getElementById("email");
 var clave = document.getElementById("contrasena");
 
+var correo1 = "example@gmail.com";
+var clave1 = "Example21."
+
 const formulario = document.getElementById("forminicio");
 var msj = document.getElementById("warnings");
 
@@ -11,57 +14,79 @@ const campoEmail = document.getElementById("email");
 formulario.addEventListener("submit", function (event) {
   event.preventDefault(); // Evitar el envío del formulario
   let msjMostrar="";
+  let enviar = false;
 
-  const email = correo.value.trim(); // Obtener el valor del campo de correo electrónico y eliminar espacios en blanco
-
-  // Expresión regular para verificar el correo electrónico
-  const regex = /@(gmail|hotmail|yahoo)\./;
-  
-
-  if (regex.test(email)) {
-    // El correo electrónico es válido
-  } else {
-    // El correo electrónico es inválido
-    msjMostrar = msjMostrar + "<br> Ingrese un correo valido"
+/*   if(correo.value == ""  ){
+    msjMostrar = msjMostrar + "<br>Ingresa un correo";
     msj.innerHTML= msjMostrar;
-    
-  }
+    enviar = true;
+}else{
+  msjMostrar = msjMostrar + "";
+  msj.innerHTML= msjMostrar;
+
+}
+  
   if(clave.value == ""  ){
     msjMostrar = msjMostrar + "<br>Ingresa una contraseña";
     msj.innerHTML= msjMostrar;
-}
-if (clave.value[0] !== clave.value[0].toUpperCase()) {
-  msjMostrar = msjMostrar + "<br> Ingresa una mayuscula"
+    enviar = true;  
+}else{
+  msjMostrar = msjMostrar + "";
   msj.innerHTML= msjMostrar;
-return false;
 
-}
+} */
+
+  if (correo.value !== correo1){
+    enviar = true;
+    msjMostrar = msjMostrar + "<br>Correo no registrado.";
+    msj.innerHTML= msjMostrar;
+  }else{
+    msjMostrar = msjMostrar + "";
+    msj.innerHTML= msjMostrar;
+  
+  }
+  if (clave.value !== clave1){
+  msjMostrar = msjMostrar + "<br>Clave incorrecta.";
+  msj.innerHTML= msjMostrar;
+    enviar = true;
+  }else{
+    msjMostrar = msjMostrar + "";
+    msj.innerHTML= msjMostrar;
+  
+  }
+/*   if (validarCorreo(correo)){
+    enviar = true;
+  }
 
   // Verificar si la contraseña tiene al menos 8 caracteres
   if (clave.value.length < 8 || clave.value.length > 25) {
-    msjMostrar = msjMostrar + "<br> La contraseña debe tener un minimo 8 caracteres y un maximo de 25 caracteres "
-    msj.innerHTML= msjMostrar;
-  return false;
-}
 
+    enviar = true;
+}
+  if (clave.value[0] !== clave.value[0].toUpperCase()) {
+
+  enviar = true;
+  
+
+}
 // Verificar si la contraseña contiene un carácter especial
 var caracteresEspeciales = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
 if (!caracteresEspeciales.test(clave.value)) {
-    msjMostrar = msjMostrar + "<br> Agrega un caracter especial"
-    msj.innerHTML= msjMostrar;
-  return false;
-}
 
+    enviar = true;
+  
+}
 // Verificar si la contraseña contiene números y no están seguidos
 if (!/\d/.test(clave.value)) {
-    msjMostrar = msjMostrar + "<br> Ingresa algun numero en la clave"
-    msj.innerHTML= msjMostrar;
-  return false;
-}
-else{ msjMostrar = msjMostrar + "<br> Enviado"
-msj.innerHTML= msjMostrar;
-window.location.href = '../html/PaginaPrincipal.html';
-}
+ 
+    enviar = true;
+}*/
+  
+ if (enviar == false){
+  window.location.href = "PaginaPrincipal.html";
+  formulario.reset();
+}  
+
 });
 function esMayuscula(letra){
   if(letra == letra.toUpperCase()){
@@ -71,3 +96,15 @@ function esMayuscula(letra){
       enviar = true;
   }
 }
+
+function validarCorreo(correo) {
+  var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!regex.test(correo)) {
+    
+    return false;
+  }
+
+  return true;
+}
+
