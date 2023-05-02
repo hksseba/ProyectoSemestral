@@ -6,8 +6,8 @@ var correo = document.getElementById("email");
 
 const formulario = document.getElementById("formregistro");
 var msj = document.getElementById("warnings");
-
-
+var tieneMinuscula = false;
+const pattern = /^(?=.*[a-z])(?=.*[A-Z])/
 
 formulario.addEventListener('submit',e =>{
 
@@ -49,14 +49,7 @@ formulario.addEventListener('submit',e =>{
   
 
 
-        // Verificar si la primera letra es mayúscula
-        if (clave.value[0] !== clave.value[0].toUpperCase()) {
-            msjMostrar = msjMostrar + "<br> Ingresa una mayuscula"
-            msj.innerHTML= msjMostrar;
-            enviar = true;
         
-        }
-      
         // Verificar si la contraseña tiene al menos 8 caracteres
         if (clave.value.length < 8 || clave.value.length > 25 ) {
             msjMostrar = msjMostrar + "<br> La contraseña debe tener un minimo 8 caracteres y un maximo de 25 caracteres "
@@ -72,6 +65,16 @@ formulario.addEventListener('submit',e =>{
             enviar = true;
         }
       
+        if(pattern.test(clave.value)){
+
+        }
+        else{msjMostrar = msjMostrar + "<br> La contraseña debe contener minusculas y mayusculas"
+        msj.innerHTML= msjMostrar;
+        enviar = true;
+        }
+
+        
+
         // Verificar si la contraseña contiene números y no están seguidos
         if (!/\d/.test(clave.value)) {
             msjMostrar = msjMostrar + "<br> Ingresa algun numero en la clave"
