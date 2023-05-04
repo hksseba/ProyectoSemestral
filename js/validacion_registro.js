@@ -2,12 +2,11 @@ var nombre = document.getElementById("nombre");
 var clave = document.getElementById("contrasena");
 var clave1 = document.getElementById("contrasena1");
 var fono = document.getElementById("telefono");
-var correo = document.getElementById("email");
-
 const formulario = document.getElementById("formregistro");
 var msj = document.getElementById("warnings");
 var tieneMinuscula = false;
 const pattern = /^(?=.*[a-z])(?=.*[A-Z])/
+const patternTel = /^[0-9]*$/;
 
 formulario.addEventListener('submit',e =>{
 
@@ -17,7 +16,7 @@ formulario.addEventListener('submit',e =>{
     
     
     let enviar = false;
-    if(nombre.value.length < 4 || nombre.value.length > 20){
+    if(nombre.value.trim().length < 4 || nombre.value.trim().length > 20){
         msjMostrar = msjMostrar + "<br>El nombre debe tener entre 4 y 20 caracteres.";
         enviar = true;       
     }
@@ -97,7 +96,13 @@ formulario.addEventListener('submit',e =>{
         
           if (fono.value.charAt(0) !== "9") {
             enviar = true;
+            msjMostrar = msjMostrar + "<br> El primer numero debe ser 9"
+            msj.innerHTML= msjMostrar;
+            enviar = true;
           } 
+          if(patternTel.test(fono.value)){
+
+          }
         
           // Verificar si el número de teléfono tiene un máximo de 9 dígitos
         if (fono.value.length !== 9) {
