@@ -83,7 +83,7 @@ if (!/\d/.test(clave.value)) {
 }*/
   
  if (enviar == false){
-  window.location.href = "PaginaPrincipal.html";
+  window.location.href = "Usuario.html";
   formulario.reset();
 }  
 
