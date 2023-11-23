@@ -1,0 +1,25 @@
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    /* Otros estilos que desees aplicar */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #000000;
+}
